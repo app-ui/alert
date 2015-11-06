@@ -1,0 +1,27 @@
+{
+	"name": "app.ui.alert",
+	"version": "0.0.1",
+	"author": "makesites",
+	"authors": [
+		"Makis Tracend <makis@makesit.es>"
+	],
+	"description": "A custom element to display errors, warnings, confirmations and notifications",
+	"keywords": [
+		"app",
+		"ui",
+		"component",
+		"web-components"
+	],
+	"license": "MIT",
+	"repository" : "http://github.com/app-ui/alert",
+	"main": ["./src/main.js"],
+	"ignore": [
+		"bower_components",
+		"components",
+		"node_modules"
+	],
+	"dependencies": {
+		"backbone.ui.alert": "*",
+		"webcomponentsjs": "*"
+	}
+}
