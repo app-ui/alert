@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>APP UI Alert</title>
+
+<link rel="import" href="../">
+
+</head>
+<body>
+
+<div id="main">
+	<p>This is the most common usage (and the default value), displaying the alert at the top of the page...</p>
+	<a href="" id="new-modal" title="This is my message">Click me</a>
+</div>
+
+<!-- example -->
+<script type="text/javascript">
+var button = document.getElementById("new-modal");
+
+button.addEventListener('click', function( e ) {
+	e.preventDefault();
+
+	var el = document.createElement("ui-alert");
+	// attributes...
+	document.body.appendChild(el);
+
+	return false;
+});
+
+</script>
+
+</body>
+</html>
