@@ -22,6 +22,7 @@ button.addEventListener('click', function( e ) {
 	e.preventDefault();
 
 	var el = document.createElement("ui-alert");
+	el.innerHTML = e.target.getAttribute('title');
 	// attributes...
 	document.body.appendChild(el);
 
