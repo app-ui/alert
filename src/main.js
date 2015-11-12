@@ -10,22 +10,28 @@
 	// Fires when an instance was inserted into the document
 	el.attachedCallback = function() {
 
-		// gather options
+		// gather attributes
+		var src = this.getAttribute("src");
+		var message = this.innerHTML;
+		// variables
 		var self = this;
+		// set options
 		var options = {
+			silentRender: true,
+			message: message
 		};
 		// ...
 		// shadowroot option (resolve issues before exposing as option...)
 		var hidden = false;
 		options.el = ( hidden ) ? this.createShadowRoot() : this;
 		// instantiate view
-		this.view = new APP.UI.Alert( options );
+		if( !this.view ) this.view = new APP.UI.Alert( options );
 
 	};
 
 	// Fires when an instance was removed from the document
 	el.detachedCallback = function() {
-		if( this.view ) this.view.destroy();
+		//if( this.view ) this.view.destroy();
 	};
 
 	// Fires when an attribute was added, removed, or updated
