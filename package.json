@@ -1,0 +1,17 @@
+{
+	"name": "app.ui.alert",
+	"version": "0.1.0",
+	"author": "makesites",
+	"homepage": "http://github.com/app-ui/alert",
+	"licenses": [
+		{
+			"type": "MIT License",
+			"url": "http://www.makesites.org/licenses/MIT"
+		}
+	],
+	"engine": {
+		"node": ">=10.x.x"
+	},
+	"dependencies": {
+	}
+}
