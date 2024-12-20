@@ -10,7 +10,8 @@
 	// Fires when an instance was inserted into the document
 	el.attachedCallback = function() {
 
-		// gather attributes
+		/*
+		// gather attributes\
 		var src = this.getAttribute("src");
 		var message = this.innerHTML;
 		// variables
@@ -26,16 +27,20 @@
 		options.el = ( hidden ) ? this.createShadowRoot() : this;
 		// instantiate view
 		if( !this.view ) this.view = new APP.UI.Alert( options );
+		*/
+		this.trigger('loaded');
 
 	};
 
 	// Fires when an instance was removed from the document
 	el.detachedCallback = function() {
 		//if( this.view ) this.view.destroy();
+		this.trigger("destroy");
 	};
 
 	// Fires when an attribute was added, removed, or updated
 	el.attributeChangedCallback = function(attr, oldVal, newVal) {
+		/*
 		// prerequisite(s)
 		if(!this.view) return;
 		if( attr == "class") return;
@@ -43,7 +48,8 @@
 		// filter options?
 		this.view.options[attr] = newVal;
 		this.view.update();
-
+		*/
+		this.trigger("update");
 	};
 
 	document.registerElement('ui-alert', {
